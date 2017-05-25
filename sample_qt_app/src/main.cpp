@@ -1,11 +1,10 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include <iostream>
-using namespace std;
+#include "qnode.h"
 int main(int argc, char *argv[])
 {
-    QApplication a(argc, argv);
-    MainWindow w;
+    QApplication a(argc,argv);
+    MainWindow w(argc,argv);
     w.show();
     return a.exec();
 }

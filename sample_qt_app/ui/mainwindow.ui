@@ -7,20 +7,20 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>251</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTextEdit" name="textEdit">
+   <widget class="QLCDNumber" name="lcd">
     <property name="geometry">
      <rect>
-      <x>90</x>
-      <y>70</y>
-      <width>201</width>
-      <height>78</height>
+      <x>0</x>
+      <y>10</y>
+      <width>401</width>
+      <height>171</height>
      </rect>
     </property>
    </widget>
@@ -31,7 +31,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>25</height>
+     <height>26</height>
     </rect>
    </property>
   </widget>
