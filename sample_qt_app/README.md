@@ -7,4 +7,4 @@ To run this app:-
 4. ``` rosrun sample_qt_app app ```
 
 ### Note
-This package does absolutely nothing. This is just a guideline to making Qt apps for ROS.
+This package publishes and subcribes natural numbers. This is just a guideline to making Qt apps for ROS.
