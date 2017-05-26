@@ -7,7 +7,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-find_package(Qt4 REQUIRED COMPONENTS QtCore QtGui QtWidgets)
+find_package(Qt4 REQUIRED COMPONENTS QtCore QtGui)
 include(${QT_USE_FILE})
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
@@ -15,7 +15,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR})
 ## Find files 
 ################################################
 file(GLOB QT_FORMS RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} ui/*.ui)
-set(QT_MOC include/mainwindow.h include/ui_mainwindow.h)
+set(QT_MOC include/mainwindow.h)
 SET(QT_SOURCES src/mainwindow.cpp)
 
 ################################################

@@ -1,10 +1,20 @@
 #include "mainwindow.h"
 #include <QApplication>
-#include "qnode.h"
+#include <iostream>
+using namespace std;
 int main(int argc, char *argv[])
-{
-    QApplication a(argc,argv);
-    MainWindow w(argc,argv);
+{		
+		ros::init(argc, argv, "listener");
+		ros::NodeHandle nh;
+    QApplication a(argc, argv);
+    MainWindow w(nh);
     w.show();
-    return a.exec();
+		ros::Rate rate(10);
+		while(ros::ok())
+		{
+			ros::spinOnce();
+			rate.sleep();
+			a.processEvents();
+		}
+    return 0;
 }
