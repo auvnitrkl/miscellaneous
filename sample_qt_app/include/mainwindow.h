@@ -17,12 +17,12 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(ros::NodeHandle _nh,QWidget *parent = 0);
     ~MainWindow();
-		void callback(const std_msgs::Int32::ConstPtr& msg);
+    void callback(const std_msgs::Int32::ConstPtr& msg);
 
 private:
     Ui::MainWindow *ui;
-		ros::NodeHandle nh;
-		ros::Subscriber sub;
+    ros::NodeHandle nh;
+    ros::Subscriber sub;
 };
 
 #endif // MAINWINDOW_H

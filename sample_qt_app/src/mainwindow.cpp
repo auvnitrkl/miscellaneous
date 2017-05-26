@@ -6,7 +6,7 @@ MainWindow::MainWindow(ros::NodeHandle _nh, QWidget *parent) :
     ui(new Ui::MainWindow), nh(_nh)
 {
     ui->setupUi(this);
-		sub = nh.subscribe("numbers", 1, &MainWindow::callback, this);
+    sub = nh.subscribe("numbers", 1, &MainWindow::callback, this);
 }
 
 MainWindow::~MainWindow()
@@ -16,5 +16,5 @@ MainWindow::~MainWindow()
 
 void MainWindow::callback(const std_msgs::Int32::ConstPtr& msg)
 {
-	ui->lcd->display(msg->data);
+    ui->lcd->display(msg->data);
 }
